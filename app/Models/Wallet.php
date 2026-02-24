@@ -15,13 +15,13 @@ class Wallet extends Model
         'balance',
     ];
 
-    // Wallet belongs to a user
+    
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // Wallet has many transactions
+
     public function transactions()
     {
         return $this->hasMany(Transaction::class);

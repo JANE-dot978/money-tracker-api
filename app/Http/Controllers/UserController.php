@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    // Create a new user
+    
     public function store(Request $request)
     {
         $request->validate([
@@ -26,7 +26,7 @@ class UserController extends Controller
         ], 201);
     }
 
-    // Get user profile with all wallets and total balance
+    
     public function show($id)
     {
         $user = User::with('wallets')->find($id);

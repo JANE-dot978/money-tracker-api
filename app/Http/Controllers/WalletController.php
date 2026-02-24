@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class WalletController extends Controller
 {
-    // Create a new wallet for a user
+    
     public function store(Request $request)
     {
         $request->validate([
@@ -28,7 +28,7 @@ class WalletController extends Controller
         ], 201);
     }
 
-    // Get a single wallet with its balance and transactions
+    
     public function show($id)
     {
         $wallet = Wallet::with('transactions')->find($id);
